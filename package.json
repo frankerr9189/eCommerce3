@@ -1,0 +1,47 @@
+{
+  "name": "ecommercebusiness",
+  "version": "1.0.0",
+  "description": "Demo : https://aazonaapp.herokuapp.com/",
+  "main": "index.js",
+  "dependencies": {
+    "@mars/heroku-js-runtime-env": "^3.0.2",
+    "babel-runtime": "^6.26.0",
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "http-proxy-middleware": "^1.0.4",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.9.16"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.8.4",
+    "@babel/node": "^7.8.4",
+    "@babel/preset-env": "^7.8.4",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb": "^18.1.0",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react-hooks": "^2.5.1",
+    "nodemon": "^2.0.2"
+  },
+  "scripts": {
+    "start": "nodemon --watch backend --exec babel-node backend/server.js",
+    "build": "rm -rf dist && babel backend -d dist",
+    "heroku-postbuild": "npm run build && cd frontend && npm install && npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/frankerr9189/eCommerce3.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/basir/amazona/issues"
+  },
+  "homepage": "https://github.com/frankerr9189/ecommerce3.git",
+  "engines": {
+    "node": "12.4.0",
+    "npm": "6.9.0"
+  }
+}
